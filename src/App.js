@@ -8,7 +8,7 @@ import Humidity from "./Humidity";
 import Wind from "./Wind";
 import Footer from "./Footer";
 
-function App() {
+export default function App() {
    return (
       <div className="App">
          <div className="container p-5 shadow p-3 rounded-4">
@@ -32,5 +32,3 @@ function App() {
       </div>
    );
 }
-
-export default App;
