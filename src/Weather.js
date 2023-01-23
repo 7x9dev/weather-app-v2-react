@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { ColorRing } from "react-loader-spinner";
 import CurrentWeather from "./CurrentWeather";
+import CurrentDate from "./CurrentDate";
 
 export default function Weather(props) {
    const [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,7 +12,7 @@ export default function Weather(props) {
       setWeatherData({
          ready: true,
          city: response.data.name,
-         date: "Saturday 20:39",
+         date: new Date(response.data.dt * 1000),
          description: response.data.weather[0].description,
          temperature: response.data.main.temp,
          humidity: response.data.main.humidity,
@@ -57,7 +58,9 @@ export default function Weather(props) {
             <div className="city">
                <h2>{weatherData.city}</h2>
             </div>
-            <p>{weatherData.date}</p>
+            <p>
+               <CurrentDate date={weatherData.date} />
+            </p>
             <p className="weather-dscr">{weatherData.description}</p>
             <CurrentWeather data={weatherData} />
          </div>
