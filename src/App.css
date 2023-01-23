@@ -12,6 +12,9 @@ body {
    font-weight: 400;
    font-size: 17px;
    color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 h1,
 h2,
@@ -31,15 +34,13 @@ h3 {
    text-transform: capitalize;
    margin: 0;
 }
-.container {
-   display: block;
-   margin: 100px auto 25px auto;
-   max-width: 35%;
-   /* background-image: url("../images/bg.jpg"); */
+.App .container {
+   width: 35vw;
+   background: url("/img/bg.jpg");
    height: auto;
    background-size: cover;
    background-position: center;
-   background-color: #000;
+   margin-bottom: 30px;
 }
 
 .input,
@@ -114,4 +115,8 @@ h3 {
 }
 .footLink:hover {
    color: #38f4c9;
+}
+.spinner {
+   display: flex;
+   justify-content: center;
 }
