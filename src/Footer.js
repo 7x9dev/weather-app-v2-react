@@ -8,7 +8,7 @@ export default function Footer() {
             className="footLink"
             href="https://www.7x9.dev/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
          >
             {" "}
             Valerie&nbsp;D.
@@ -18,7 +18,7 @@ export default function Footer() {
             className="footLink"
             href="https://github.com/7x9dev"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
          >
             {" "}
             GitHub
