@@ -40,7 +40,7 @@ export default function Weather(props) {
 
    if (weatherData.ready) {
       return (
-         <div className="container p-5 shadow p-3 rounded-4">
+         <div className="container p-5 pb-3 shadow rounded-4">
             <div className="Search">
                <form className="input-group" onSubmit={searchCity}>
                   <input
@@ -51,9 +51,6 @@ export default function Weather(props) {
                   />
                   <button className="btn btn-primary me-3" type="submit">
                      <i className="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                  <button className="btn btn-outline-secondary" type="button">
-                     Current city
                   </button>
                </form>
             </div>

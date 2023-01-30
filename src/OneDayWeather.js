@@ -15,7 +15,7 @@ export default function OneDayWeather(props) {
       <div className="col d-flex flex-column align-items-center">
          <h3>{day()}</h3>
          <div className="weather-icon-next">
-            <WeatherIcon code="01d" size={40} />
+            <WeatherIcon code={props.data.weather[0].icon} size={40} />
          </div>
          <div className="weather-next">
             <span className="degree-max mb-0">
