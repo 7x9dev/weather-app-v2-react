@@ -3,6 +3,7 @@ import axios from "axios";
 import { ColorRing } from "react-loader-spinner";
 import CurrentWeather from "./CurrentWeather";
 import CurrentDate from "./CurrentDate";
+import DailyForecast from "./DailyForecast";
 
 export default function Weather(props) {
    const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,7 +18,8 @@ export default function Weather(props) {
          temperature: response.data.main.temp,
          humidity: response.data.main.humidity,
          wind: response.data.wind.speed,
-         icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+         icon: response.data.weather[0].icon,
+         coord: response.data.coord,
       });
    }
 
@@ -63,6 +65,7 @@ export default function Weather(props) {
             </p>
             <p className="weather-dscr">{weatherData.description}</p>
             <CurrentWeather data={weatherData} />
+            <DailyForecast coordinates={weatherData.coord} />
          </div>
       );
    } else {

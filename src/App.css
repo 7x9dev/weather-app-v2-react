@@ -30,12 +30,12 @@ h2 {
    text-transform: capitalize;
 }
 h3 {
-   font-size: 18px;
+   font-size: 20px;
    text-transform: capitalize;
    margin: 0;
 }
 .App .container {
-   width: 30vw;
+   width: 40vw;
    background: url("/img/bg.jpg");
    height: auto;
    background-size: cover;
@@ -74,10 +74,11 @@ h3 {
 .city {
    margin: 30px 0 0 0;
 }
-.weather-icon {
+.weather-icon canvas {
    background-color: rgba(255, 255, 255, 0.25);
    border-radius: 100%;
    margin-right: 20px;
+   padding: 18px;
 }
 .weather-dscr {
    text-transform: capitalize;
@@ -100,9 +101,18 @@ h3 {
    margin: 4px 0;
    font-size: 16px;
 }
-.weather-icon-next {
-   width: 45px;
-   margin: 10px 0;
+.weather-next {
+   display: flex;
+   gap: 8px;
+}
+.weather-icon-next canvas {
+   margin: 10px 0 2px 0;
+   border-radius: 100%;
+   background-color: rgba(255, 255, 255, 0.2);
+   padding: 10px;
+}
+.degree-min {
+   opacity: 0.8;
 }
 .footer {
    text-align: center;
